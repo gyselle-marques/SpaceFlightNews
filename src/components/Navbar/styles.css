@@ -1,6 +1,11 @@
 header {
   background-color: #333333;
   box-shadow: 0 4px 7px rgba(0, 0, 0, 0.25);
+
+  position: sticky;
+  top: 0;
+  left: 0;
+  width: 100%;
 }
 
 header nav#navbar {
@@ -49,5 +54,6 @@ header nav#navbar ul.nav-list li a:hover {
     display: grid;
     align-items: center;
     justify-content: center;
+    padding: 0 1rem;
   }
 }
