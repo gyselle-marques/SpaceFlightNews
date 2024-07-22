@@ -13,7 +13,7 @@ function App() {
   useEffect(() => {
     async function loadNews() {
       const response = await axios.get(
-        "https://api.spaceflightnewsapi.net/v3/articles"
+        "https://api.spaceflightnewsapi.net/v4/articles/"
       );
       const newsData = response.data;
 
@@ -49,15 +49,15 @@ function App() {
             />
           </div>
         ) : (
-          news.map((article) => {
+          news.results.map((article) => {
             return (
               <Article
                 key={article.id}
                 link={article.url}
                 title={article.title}
-                provider={article.newsSite}
+                provider={article.news_site}
                 description={article.summary}
-                thumbnail={article.imageUrl}
+                thumbnail={article.image_url}
               />
             );
           })
